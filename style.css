@@ -3,31 +3,80 @@
     margin: 0;
 }
 .dsp{
+
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     justify-content: center;
     display: flex;
-    
 }
 a{
     color: black;
     text-decoration: none;
-    padding: 25px;
-    background-color: aqua;
+    padding: 20px;
     margin: 10px;
     width: 75px;
-    height: 10px;
-    border-radius: 10px;
+    height: 8px;
+    border-radius: 5PX;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 /* button1 */
 .button1{
-    background-color: burlywood;
+    background-color: rgb(0, 0, 0);
+    transition:1s ease all;
+    color: rgb(35, 255, 1);
+    box-shadow:
+    -1px -1px 5px 0px #fff,
+    7px 7px 20px 0px #0003,
+    4px 4px 5px 0px #0002;
 }
+
+.button1:before{
+    content: '';
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background: rgb(35, 255, 1);
+    transition:400ms ease all;
+}
+.button1:hover:before{
+    width: 100%;    
+    transition:1s ease all;
+}
+.button1:after{
+    content: '';
+    position: absolute;
+    width: 0;
+    bottom:0;
+    right: 0;
+    background: rgb(35, 255, 1);
+    transition:400ms ease all;
+    }
+.button1:hover:after{
+    content: '';
+    height: 1px;
+    width: 100%;    
+    transition:1s ease all;
+    }
+.button1:hover{
+    box-shadow:
+    -1px -1px 5px 0px #fff,
+    7px 7px 20px 0px rgba(0, 0, 0, 0.545),
+    4px 4px 5px 0px #0002;
+    background: transparent;
+    transition:1s ease all;
+    color: black;
+}
+.button1:active{
+    top:2px;
+}
+
 /* button2 */
 .button2{
     background-color: blue;
